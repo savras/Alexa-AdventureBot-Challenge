@@ -1,0 +1,13 @@
+New-Variable -Name LAMBDASHARP -Value C:\Users\vincegim\Desktop\Desktop\Src\LambdaSharpTool
+function lash {
+  dotnet run -p $LAMBDASHARP\src\MindTouch.LambdaSharp.Tool\MindTouch.LambdaSharp.Tool.csproj --
+}
+
+----
+
+export LAMBDASHARP=C:/Users/vincegim/Desktop/Desktop/Src/LambdaSharpTool
+alias lash="dotnet run -p $LAMBDASHARP/src/MindTouch.LambdaSharp.Tool/MindTouch.LambdaSharp.Tool.csproj --"
+
+----
+
+export LAMBDASHARPTIER=Demo
