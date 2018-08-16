@@ -1,13 +1,19 @@
+Setting up variables:
+---------------------
+1.
 New-Variable -Name LAMBDASHARP -Value C:\Users\vincegim\Desktop\Desktop\Src\LambdaSharpTool
 function lash {
-  dotnet run -p $LAMBDASHARP\src\MindTouch.LambdaSharp.Tool\MindTouch.LambdaSharp.Tool.csproj --
+  dotnet run -p $LAMBDASHARP\src\MindTouch.LambdaSharp.Tool\MindTouch.LambdaSharp.Tool.csproj -- $args
 }
 
-----
-
+2.
 export LAMBDASHARP=C:/Users/vincegim/Desktop/Desktop/Src/LambdaSharpTool
 alias lash="dotnet run -p $LAMBDASHARP/src/MindTouch.LambdaSharp.Tool/MindTouch.LambdaSharp.Tool.csproj --"
 
-----
-
+3.
 export LAMBDASHARPTIER=Demo
+
+Fix for region issue:
+---------------------
+Go to ~/.aws/credentials
+Append "region = us-east-1"
